@@ -17,20 +17,28 @@ function actionFormat(key) {
 
     let aOC = document.createElement('a');
     let spanOC = document.createElement('span');
-    spanOC.classList.add('mdi', 'mdi-cloud-download', 'ml-2', 'mr-2');
+    spanOC.classList.add('mdi', 'mdi-cloud-download', 'ml-1', 'mr-1');
     spanOC.title = "OneClick download";
     aOC.href = "beatsaver://" + key;
     aOC.appendChild(spanOC);
 
-    let adDL = document.createElement('a');
+    let aDL = document.createElement('a');
     let spanDL = document.createElement('span');
-    spanDL.classList.add('mdi', 'mdi-download', 'ml-2', 'mr-2');
+    spanDL.classList.add('mdi', 'mdi-download', 'ml-1', 'mr-1');
     spanDL.title = "Simple download";
-    adDL.href = "https://beatsaver.com/api/download/key/" + key;
-    adDL.appendChild(spanDL);
+    aDL.href = "https://beatsaver.com/api/download/key/" + key;
+    aDL.appendChild(spanDL);
+
+    let aPV = document.createElement('a');
+    let spanPV = document.createElement('span');
+    spanPV.classList.add('mdi', 'mdi-eye', 'ml-1', 'mr-1');
+    spanPV.title = "Map preview";
+    aPV.href = "https://skystudioapps.com/bs-viewer/?id=" + key;
+    aPV.appendChild(spanPV);
 
     res.appendChild(aOC);
-    res.appendChild(adDL);
+    res.appendChild(aDL);
+    res.appendChild(aPV);
 
     return res.outerHTML;
 }
