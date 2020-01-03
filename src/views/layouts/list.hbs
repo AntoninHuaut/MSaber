@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>BeatSaber - MapList</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {{>css}}
+</head>
+
+<body>
+    <div class="containerBase">
+
+        <div id="toolbar">
+            <button type="button" class="btn btn-danger" onclick="rankedOnlyButton(this)">Ranked Only</button>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th class="text-center" data-width-unit="%" data-width="5" data-sortable="true" data-field="Key">
+                        🔑
+                    </th>
+                    <th class="text-center" data-width-unit="%" data-width="5" data-sortable="true" data-field="Rating"
+                        data-formatter="ratingFormat">
+                        ⭐
+                    </th>
+                    <th class="text-center" data-width-unit="%" data-width="30" data-sortable="true"
+                        data-field="FullSongName">
+                        🎵
+                    </th>
+                    <th class="text-center" data-width-unit="%" data-width="25" data-sortable="false" data-field="Diffs"
+                        data-search-formatter="false" data-formatter="diffsFormat">
+                        Diffs
+                    </th>
+                    <th class="text-center" data-width-unit="%" data-width="5" data-sortable="true" data-field="Ranked"
+                        data-formatter="rankedFormat">
+                        Ranked
+                    </th>
+                    <th class="text-center" data-width-unit="%" data-width="5" data-sortable="true"
+                        data-field="Upvotes">
+                        👍
+                    </th>
+                    <th class="text-center" data-width-unit="%" data-width="5" data-sortable="true"
+                        data-field="Downvotes">
+                        👎
+                    </th>
+                    <th class="text-center" data-width-unit="%" data-width="15" data-sortable="true"
+                        data-field="SongAuthorName">
+                        Author
+                    </th>
+                    <th class="text-center" data-width-unit="%" data-width="15" data-sortable="false" data-field="Key"
+                        data-formatter="actionFormat">
+                        Action
+                    </th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+</body>
+{{>js}}
+<script src="/js/list.js"></script>
+
+</html>

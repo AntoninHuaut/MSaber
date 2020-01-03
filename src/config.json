@@ -1,0 +1,10 @@
+{
+    "port": "3011",
+    "refreshMinuts": 60,
+    "cache": {
+        "map": {
+            "list": "https://raw.githubusercontent.com/andruzzzhka/BeatSaberScrappedData/master/combinedScrappedData.json",
+            "detail": "https://beatsaver.com/api/maps/detail/"
+        }
+    }
+}
