@@ -1,7 +1,7 @@
 const config = require('../config.json');
 const fetch = require('node-fetch');
 
-module.exports = class EDTCache {
+module.exports = class MapCache {
     constructor() {
         this.refreshInterval = setInterval(() => this.refresh(), config.refreshMinuts * 60 * 1000);
 
